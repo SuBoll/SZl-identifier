@@ -214,7 +214,7 @@ def main():
 
     plt.tight_layout()
     # Save the overview figure to the current working directory (where you run the script).
-    overview_filename = f"nonisomorphic_4v12e_SZ_{l_val}_overview.png"
+    overview_filename = "nonisomorphic_4v12e_overview.png"
     overview_path = os.path.join(os.getcwd(), overview_filename)
     fig.savefig(overview_path, dpi=300, bbox_inches="tight")
     print(f"Saved overview figure: {overview_path}")

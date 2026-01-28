@@ -1,14 +1,20 @@
 ## SZ_5 (odd modulus) experiments: solver + enumerator
 
-This folder accompanies computational experiments and reproducibility notes for a manuscript/report. It contains two scripts (intended to live in the same directory):
+This folder accompanies computational experiments and reproducibility notes for the manuscript “Orientations of 10-Edge-Connected Planar Graphs and Applications”. It contains two scripts (intended to live in the same directory):
 
 - `szl_odd_solver.py`: an $SZ_l$ decision and $\beta$-orientation solver for **odd** modulus $l$ (this project uses $l=5$).
 - `generate_nonisomorphic_4v12e.py`: enumerates constrained 4-vertex, 12-edge (with multiplicity) undirected multigraphs, removes isomorphic duplicates, renders an overview figure, and tests each graph for $SZ_5$ by calling `szl_odd_solver.py`.
 
 This README is the **single main document**: it first explains how the two scripts fit together, then gives a detailed account of the mathematical modeling and the implementation workflow of each script (including DFS pruning and isomorphism reduction), so results can be reviewed and reproduced.
 
-> Note: you may see `libpng warning: iCCP: known incorrect sRGB profile` at runtime. This is typically a benign PNG color-profile warning and does not affect saving or displaying the figure.
+**Formatting note.**
+Since inline LaTeX math is not fully supported in GitHub README files,
+some set braces may not appear correctly and should be interpreted from context.
 
+**Runtime note.**
+You may see `libpng warning: iCCP: known incorrect sRGB profile` at runtime.
+This is typically a benign PNG color-profile warning and does not affect saving
+or displaying the figure.
 ---
 
 ## 0. Recommended layout

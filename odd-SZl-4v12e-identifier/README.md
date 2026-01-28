@@ -11,9 +11,6 @@ This README is the **single main document**: it first explains how the two scrip
 > This is typically a benign PNG color-profile warning and does not affect saving
 > or displaying the figure.
 
-> Note: since inline LaTeX math is not fully supported in GitHub README files,
-> some set braces may not appear correctly; please interpret them from the
-> surrounding context.
 ---
 
 ## 0. Recommended layout

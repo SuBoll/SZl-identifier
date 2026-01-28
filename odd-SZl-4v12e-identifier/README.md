@@ -1,4 +1,4 @@
-## SZ_5 (odd modulus) experiments: solver + enumerator
+## $`SZ_l`$ (odd modulus) experiments: solver + enumerator
 
 This folder accompanies computational experiments and reproducibility notes for the manuscript “Orientations of 10-Edge-Connected Planar Graphs and Applications”. It contains two scripts (intended to live in the same directory):
 
@@ -77,7 +77,7 @@ Let $G$ be a connected undirected multigraph (parallel edges allowed, no self-lo
 
 A function $\beta:V(G)\to\mathbb{Z}_l$ is a valid boundary if:
 
-- $\beta(v)\in\{0,1,\dots,l-1\}$ for all $v$
+- $`\beta(v)\in\{0,1,\dots,l-1\}`$ for all $v$
 - $\sum_{v\in V}\beta(v)\equiv 0\pmod l$
 
 The sum condition is necessary since $\sum_v(\text{out}-\text{in})=0$ for any orientation.
@@ -98,7 +98,7 @@ The graph $G$ is $SZ_l$ if such an orientation exists for **every** valid bounda
 
 ### 4.1 Bundling parallel edges: one integer $y$ per vertex pair
 
-For an unordered pair $\{u,v\}$ (normalized as $u<v$) with multiplicity $k$, define an integer variable $y\in\{0,1,\dots,k\}$ as the number of edges oriented $u\to v$. Then:
+For an unordered pair $\{u,v\}$ (normalized as $u<v$) with multiplicity $k$, define an integer variable $`y\in\{0,1,\dots,k\}`$ as the number of edges oriented $u\to v$. Then:
 
 - net contribution at $u$ (out-in) is $2y-k$
 - net contribution at $v$ is $-(2y-k)$
@@ -169,7 +169,7 @@ High-level steps:
 
 1. validate `beta` (vertex set, value range, sum condition)
 2. compute target residues `target_residue[v]`
-3. define domains $y_e\in\{0,\dots,k_e\}$ for each bundle
+3. define domains $`y_e\in\{0,\dots,k_e\}`$ for each bundle
 4. order variables by increasing domain size (small $k_e$ first)
 5. DFS assignment while maintaining `partial_sum[v]` (integer partial sums of $S(v)$)
 6. prune using “interval reachability under congruence”:

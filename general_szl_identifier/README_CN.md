@@ -89,9 +89,9 @@ python szl_solver.py
 
 对给定 $`\beta`$，若存在一种对 $`G`$ 的定向，使得对每个顶点 $`v`$：
 
-$$`
+$$
 (\mathrm{outdeg}(v)-\mathrm{indeg}(v))\equiv \beta(v)\pmod{2l}
-`$$
+$$
 
 则称该定向为一组 $`\beta`$-定向。
 
@@ -115,33 +115,33 @@ $$`
 - $`\mathrm{sign}(v,e)=-1`$（$`v`$ 为较大端点）
 
 对每个顶点 $`v`$，定义 **$`S(v)`$** 为与 $`v`$ 关联的边束上 $`y`$ 的带符号和：
-$$`
+$$
 S(v)=\sum_{e\ni v}\mathrm{sign}(v,e)\cdot y_e
-`$$
+$$
 即：若边束 $`e`$ 的 $`u`$ 端是 $`v`$，则贡献 $`+y_e`$；若 $`v`$ 端是 $`v`$，则贡献 $`-y_e`$。
 
 **常数项 $`C_v`$** 定义为（将 $`y_e`$ 取为 0 时的“基值”部分）：
-$$`
+$$
 C_v=\sum_{e\ni v}\mathrm{sign}(v,e)\cdot(-k_e)
-`$$
+$$
 其中 $`k_e`$ 为边束 $`e`$ 的重数。将 $`2y_e-k_e`$ 展开后，可得约束：
-$$`
+$$
 C_v+2S(v)\equiv \beta(v)\pmod{2l}
-`$$
+$$
 
 ### 4.3 一般模的关键：除以 2 得到 $`\gamma`$
 
 当 $`l`$ 为偶数时，2 在 $`\mathbb{Z}_{2l}`$ 中不可逆。通过奇偶性约束 $`\beta(v)\equiv \deg(v)\pmod 2`$，可证 $`(\beta(v)-C_v)`$ 为偶数（mod $`2l`$）。定义：
 
-$$`
+$$
 \gamma(v)=\frac{(\beta(v)-C_v)\bmod 2l}{2}\in\mathbb{Z}_l
-`$$
+$$
 
 则约束化为：
 
-$$`
+$$
 S(v)\equiv \gamma(v)\pmod l
-`$$
+$$
 
 代码中把右端预计算为 `target_residue[v_idx]`，后续 DFS 的目标就是让每个顶点的 $`S(v)`$ 落在对应同余类。
 

@@ -21,7 +21,7 @@ $SZ_l$-properties **for odd modulus $l$**, focusing on 4-vertex multigraphs:
 
 See the README **inside this directory** for full details and reproducibility instructions.
 
-### `general-SZl/`  
+### `general_szl_identifier/`  
 
 This folder contains scripts for **general modulus $l$** (odd or even), complementary to the odd-modulus version:
 

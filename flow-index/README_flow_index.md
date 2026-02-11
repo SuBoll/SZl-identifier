@@ -15,8 +15,8 @@ This document describes the **flow index** script `compute_flow_index.py`, which
 Keep in the same directory:
 
 - `compute_flow_index.py`
-- `README_flow_index.md` (this file)
-- `README_flow_index_CN.md` (Chinese)
+- `README.md` (this file)
+- `README_CN.md` (Chinese)
 
 ---
 
@@ -138,3 +138,4 @@ The script includes commented examples:
 - The optimization uses SLSQP with inequality constraints $`\|f_e\|_p \ge 1`$ and minimizes $`\max_e \|f_e\|_p`$. Multiple random restarts improve the chance of finding a good solution.
 - Complexity is dominated by the optimizer; the cycle-space assignment and visualization are $`O(m)`$ and $`O(m^2)`$ respectively.
 - For larger graphs, increase `repeats` and `maxiter` as needed.
+
